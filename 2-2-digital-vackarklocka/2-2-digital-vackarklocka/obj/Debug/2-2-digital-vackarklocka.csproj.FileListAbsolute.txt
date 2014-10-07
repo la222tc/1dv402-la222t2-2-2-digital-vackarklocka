@@ -1,0 +1,6 @@
+C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.exe.config
+C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.exe
+C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.pdb
+C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.csprojResolveAssemblyReference.cache
+C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.exe
+C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.pdb
