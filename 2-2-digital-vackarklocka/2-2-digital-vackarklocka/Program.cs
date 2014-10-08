@@ -9,11 +9,9 @@ namespace _2_2_digital_vackarklocka
     class Program
     {
         static void Main(string[] args)
-        {
-            string HorizontalLine = "Test 1. \nTest av standard konstruktorn.";
-
-            try
             {
+                int ammountOfMinutes;
+                string HorizontalLine = "Test 1. \nTest av standard konstruktorn.";
 
                 Console.BackgroundColor = ConsoleColor.DarkGreen;
                 Console.ForegroundColor = ConsoleColor.White;
@@ -25,18 +23,15 @@ namespace _2_2_digital_vackarklocka
 
 
                 AlarmClock time = new AlarmClock();
-                
-                
-                
-                
-                
 
                 Console.WriteLine("__________________________________");
                 ViewTestHeader(HorizontalLine);
                 Console.WriteLine();
                 Console.WriteLine(time);
 
+
                 AlarmClock time2 = new AlarmClock(9, 42);
+
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("__________________________________");
@@ -45,7 +40,9 @@ namespace _2_2_digital_vackarklocka
                 Console.WriteLine();
                 Console.WriteLine(time2);
 
+
                 AlarmClock time3 = new AlarmClock(13, 24, 7, 35);
+
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("__________________________________");
@@ -54,61 +51,122 @@ namespace _2_2_digital_vackarklocka
                 Console.WriteLine();
                 Console.WriteLine(time3);
 
+
+
                 AlarmClock time4 = new AlarmClock(23, 58, 7, 35);
+
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("__________________________________");
                 HorizontalLine = "Test 4.\nStäller befintligt AlamClock-objekt till 23:58 och låter den gå 13 minuter.";
                 ViewTestHeader(HorizontalLine);
                 Console.WriteLine();
-                Run(time4, time.Minute);
+                ammountOfMinutes = 13;
+                Run(time4, ammountOfMinutes);
+
+
 
                 AlarmClock time5 = new AlarmClock(6, 12, 6, 15);
+
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("__________________________________");
                 HorizontalLine = "Test 5.\nStäller befintligt AlarmClock-objekt till tiden 6:12 och alarmtiden till 6:15 och låter den gå 6 minuter";
                 ViewTestHeader(HorizontalLine);
                 Console.WriteLine();
-                Run(time5, time5.Minute);
+                ammountOfMinutes = 6;
+                Run(time5, ammountOfMinutes);
 
-                
+
+
+
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("__________________________________");
                 HorizontalLine = "Test 6.\nTestar egenskaperna så att undantag kastas så tid och alarmtid tilldelas felaktiga värden.";
                 ViewTestHeader(HorizontalLine);
                 Console.WriteLine();
-                AlarmClock time6 = new AlarmClock(14, 54, 15, 2);
-                
-                
+                try
+                {
+                    time.Hour = 88;
+                }
+
+                catch (ArgumentException ex)
+                {
+                    ViewErrorMessage(ex.Message);
+                }
+
+                try
+                {
+                    time.Minute = 88;
+                }
+
+                catch (ArgumentException ex)
+                {
+                    ViewErrorMessage(ex.Message);
+                }
+
+                try
+                {
+                    time.Alarmhour = 88;
+                }
+
+                catch (ArgumentException ex)
+                {
+                    ViewErrorMessage(ex.Message);
+                }
+
+                try
+                {
+                    time.Minute = 88;
+                }
+
+                catch (ArgumentException ex)
+                {
+                    ViewErrorMessage(ex.Message);
+                }
+
+
+
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("__________________________________");
                 HorizontalLine = "Test 7.\nTest av konstruktorer så att undantag kastas då tid och alarmtid tilldelas felaktiga värden.";
                 ViewTestHeader(HorizontalLine);
                 Console.WriteLine();
-                AlarmClock time7 = new AlarmClock(6, 12, 0, 0);
-                time.Hour = 88;
 
+                try
+                {
+                    AlarmClock time6 = new AlarmClock(88, 0, 0, 0);
+                }
 
-            }
-            catch (ArgumentException ex)
-            {
-                ViewErrorMessage(ex.Message);
+                catch (ArgumentException ex)
+                {
+                    ViewErrorMessage(ex.Message);
 
-            }
+                }
+
+                try
+                {
+                    AlarmClock time6 = new AlarmClock(0, 0, 545, 0);
+                }
+
+                catch (ArgumentException ex)
+                {
+                    ViewErrorMessage(ex.Message);
+
+                }
+
+                
+
         }
         private static void Run(AlarmClock ac, int minutes)
         {
-            
 
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < minutes; i++)
             {
-                bool result = ac.TickTock();
-                
 
-                if (result == true)
+                if (ac.TickTock())
                 {
                     Console.BackgroundColor = ConsoleColor.Blue;
                     Console.WriteLine(ac + "    RING!! RING!! RING!!");

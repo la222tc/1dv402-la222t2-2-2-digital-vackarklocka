@@ -4,3 +4,9 @@ C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital
 C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.csprojResolveAssemblyReference.cache
 C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.exe
 C:\Users\Linus\Desktop\visualstudioprojects\2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.pdb
+P:\Laborationer\1dv402-la222t2-2-2-digital-vackarklocka\2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.exe.config
+P:\Laborationer\1dv402-la222t2-2-2-digital-vackarklocka\2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.exe
+P:\Laborationer\1dv402-la222t2-2-2-digital-vackarklocka\2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.pdb
+P:\Laborationer\1dv402-la222t2-2-2-digital-vackarklocka\2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.exe
+P:\Laborationer\1dv402-la222t2-2-2-digital-vackarklocka\2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.pdb
+P:\Laborationer\1dv402-la222t2-2-2-digital-vackarklocka\2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.csprojResolveAssemblyReference.cache

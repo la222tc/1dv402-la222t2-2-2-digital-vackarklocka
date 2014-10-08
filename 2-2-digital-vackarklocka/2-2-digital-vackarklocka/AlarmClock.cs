@@ -64,7 +64,7 @@ namespace _2_2_digital_vackarklocka
 
             set
             {
-                if (value < 0 || value > 60)
+                if (value < 0 || value > 59)
                 {
                     throw new ArgumentException("Minuten är inte i intervallet 0-59");
                 }
@@ -76,14 +76,16 @@ namespace _2_2_digital_vackarklocka
         }
 
         public AlarmClock()
+            :this (0, 0)
         {
 
         }
 
         public AlarmClock(int hour, int minute)
+            :this (hour, minute, 0, 0)
         {
-            Hour = hour;
-            Minute = minute;
+            //Hour = hour;
+            //Minute = minute;
         }
 
         public AlarmClock(int hour, int minute, int alarmHour, int alarmMinute)
@@ -97,29 +99,31 @@ namespace _2_2_digital_vackarklocka
         public bool TickTock()
         {
 
+
+            if (Minute == 59 && Hour == 23)
+            {
+                Minute = 0;
+                Hour = 0;
+            }
+
+            if (Minute == 59)
+            {
+                Minute = 0;
+                Hour++;
+            }
+
             Minute++;
 
-                if (Minute == 60 && Hour == 23)
-                {
-                    Minute = 0;
-                    Hour = 0;
-                }
+                
 
-                if (Minute == 60)
-                {
-                    Minute = 0;
-                    Hour++;
-                }
-
-
-                if (Minute == AlarmMinute && Hour == Alarmhour)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+            if (Minute == AlarmMinute && Hour == Alarmhour)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
               
 
@@ -129,16 +133,16 @@ namespace _2_2_digital_vackarklocka
 
         public override string ToString()
         {
-            if (Hour > 9 && Alarmhour > 9)
+           /* if (Hour > 9 && Alarmhour > 9)
             {
                 return String.Format("      {0:D2}:{1:D2}  <{2:D2}:{3:D2}>",
                 Hour, Minute, Alarmhour, AlarmMinute);
             }
             else
-            {
-                return String.Format("      {0}:{1:D2}  <{2}:{3:D2}>",
+            {*/
+                return String.Format("      {0,2}:{1:D2}  <{2,2}:{3:D2}>",
                 Hour, Minute, Alarmhour, AlarmMinute);
-            }
+            //}
 
             //return String.Format("{0}:{1}  <{2}:{3}>",
             //    Hour, Minute, Alarmhour, AlarmMinute);
